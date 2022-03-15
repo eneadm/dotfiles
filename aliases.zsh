@@ -1,5 +1,5 @@
 # Shortcuts
-alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadshell="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
@@ -17,7 +17,7 @@ alias lara="sites && cd laravel/"
 alias docs="lara && cd docs/"
 
 # Laravel
-alias a="php artisan"
+alias art="php artisan"
 alias fresh="php artisan migrate:fresh --seed"
 alias tinker="php artisan tinker"
 alias seed="php artisan db:seed"
@@ -35,7 +35,7 @@ alias watch="npm run watch"
 alias docker-composer="docker-compose"
 
 # SQL Server
-alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=LaravelWow1986! -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
+# alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=LaravelWow1986! -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
 
 # Git
 alias gst="git status"
