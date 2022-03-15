@@ -2,7 +2,7 @@
 
 echo "Cloning repositories..."
 
-WORK=$HOME/_work
+WORK=$HOME/_code
 
 # Company
 git clone git@bitbucket.org:ktronik/klimahelden-frontend.git $WORK/klimahelden-frontend
