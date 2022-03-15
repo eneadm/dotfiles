@@ -39,7 +39,7 @@ pecl install redis swoole
 $HOME/.composer/vendor/bin/valet install
 
 # Create a Sites directory
-mkdir $HOME/Sites
+mkdir $HOME/_work
 
 # Create sites subdirectories
 # mkdir $HOME/Sites/blade-ui-kit
