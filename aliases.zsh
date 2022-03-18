@@ -54,3 +54,5 @@ alias docker-composer="docker-compose"
 # alias stash="git stash -u"
 # alias unstage="git restore --staged ."
 # alias wip="commit wip"
+
+alias pest="./vendor/bin/pest"
