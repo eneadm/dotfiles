@@ -248,15 +248,15 @@ function _mnml_zle-keymap-select {
 }
 
 # draw infoline if no command is given
-function _mnml_buffer-empty {
-    if [ -z "$BUFFER" ]; then
-        _mnml_iline "$(_mnml_wrap MNML_INFOLN)"
+# function _mnml_buffer-empty {
+#     if [ -z "$BUFFER" ]; then
+#         _mnml_iline "$(_mnml_wrap MNML_INFOLN)"
 #         _mnml_me
-        zle redisplay
-    else
-        zle accept-line
-    fi
-}
+#         zle redisplay
+#     else
+#         zle accept-line
+#     fi
+# }
 
 # properly bind widgets
 # see: https://github.com/zsh-users/zsh-syntax-highlighting/blob/1f1e629290773bd6f9673f364303219d6da11129/zsh-syntax-highlighting.zsh#L292-L356
