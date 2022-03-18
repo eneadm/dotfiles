@@ -12,7 +12,7 @@ MNML_BGJOB_MODE=${MNML_BGJOB_MODE:-4}
 [ "${+MNML_RPROMPT}" -eq 0 ] && MNML_RPROMPT=('mnml_cwd 2 0' mnml_git)
 [ "${+MNML_INFOLN}" -eq 0 ] && MNML_INFOLN=(mnml_err mnml_jobs mnml_uhp mnml_files)
 
-[ "${+MNML_MAGICENTER}" -eq 0 ] && MNML_MAGICENTER=(mnml_me_dirs mnml_me_ls mnml_me_git)
+# [ "${+MNML_MAGICENTER}" -eq 0 ] && MNML_MAGICENTER=(mnml_me_dirs mnml_me_ls mnml_me_git)
 
 # Components
 function mnml_status {
@@ -177,27 +177,27 @@ function mnml_files {
 }
 
 # Magic enter functions
-function mnml_me_dirs {
-    local _w="\e[0m"
-    local _g="\e[38;5;244m"
+# function mnml_me_dirs {
+#     local _w="\e[0m"
+#     local _g="\e[38;5;244m"
 
-    if [ "$(dirs -p | sed -n '$=')" -gt 1 ]; then
-        local stack="$(dirs)"
-        echo "$_g${stack//\//$_w/$_g}$_w"
-    fi
-}
+#     if [ "$(dirs -p | sed -n '$=')" -gt 1 ]; then
+#         local stack="$(dirs)"
+#         echo "$_g${stack//\//$_w/$_g}$_w"
+#     fi
+# }
 
-function mnml_me_ls {
-    if [ "$(uname)" = "Darwin" ] && ! ls --version &> /dev/null; then
-        COLUMNS=$COLUMNS CLICOLOR_FORCE=1 ls -C -G -F
-    else
-        ls -C -F --color="always" -w $COLUMNS
-    fi
-}
+# function mnml_me_ls {
+#     if [ "$(uname)" = "Darwin" ] && ! ls --version &> /dev/null; then
+#         COLUMNS=$COLUMNS CLICOLOR_FORCE=1 ls -C -G -F
+#     else
+#         ls -C -F --color="always" -w $COLUMNS
+#     fi
+# }
 
-function mnml_me_git {
-    git -c color.status=always status -sb 2> /dev/null
-}
+# function mnml_me_git {
+#     git -c color.status=always status -sb 2> /dev/null
+# }
 
 # Wrappers & utils
 # join outpus of components
@@ -222,19 +222,19 @@ function _mnml_iline {
 }
 
 # display magic enter
-function _mnml_me {
-    local -a output
-    output=()
-    local cmd_out=""
-    local cmd
-    for cmd in $MNML_MAGICENTER; do
-        cmd_out="$(eval "$cmd")"
-        if [ -n "$cmd_out" ]; then
-            output+="$cmd_out"
-        fi
-    done
-    printf '%b' "${(j:\n:)output}" | less -XFR
-}
+# function _mnml_me {
+#     local -a output
+#     output=()
+#     local cmd_out=""
+#     local cmd
+#     for cmd in $MNML_MAGICENTER; do
+#         cmd_out="$(eval "$cmd")"
+#         if [ -n "$cmd_out" ]; then
+#             output+="$cmd_out"
+#         fi
+#     done
+#     printf '%b' "${(j:\n:)output}" | less -XFR
+# }
 
 # capture exit status and reset prompt
 function _mnml_zle-line-init {
