@@ -12,7 +12,7 @@ alias version="commit 'version'"
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
-alias sites="cd $HOME/Sites"
+alias sites="cd $HOME/_code/"
 alias lara="sites && cd laravel/"
 alias docs="lara && cd docs/"
 
@@ -33,6 +33,9 @@ alias watch="npm run watch"
 
 # Docker
 alias docker-composer="docker-compose"
+
+# KH CLI
+alias kh="sh $HOME/_code/klimahelden-cli/kh"
 
 # SQL Server
 # alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=LaravelWow1986! -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
