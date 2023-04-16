@@ -58,4 +58,8 @@ alias kh="sh $HOME/_code/klimahelden-cli/kh"
 # alias unstage="git restore --staged ."
 # alias wip="commit wip"
 
+# Composer pho versions
+alias composer7='php7 /usr/local/bin/composer'
+alias composer80='php80 /usr/local/bin/composer'
+
 alias pest="./vendor/bin/pest"
