@@ -63,3 +63,8 @@ alias composer7='php7 /usr/local/bin/composer'
 alias composer80='php80 /usr/local/bin/composer'
 
 alias pest="./vendor/bin/pest"
+
+#Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
