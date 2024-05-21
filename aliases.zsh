@@ -57,5 +57,7 @@ alias kh="sh $HOME/_code/klimahelden-cli/kh"
 # alias stash="git stash -u"
 # alias unstage="git restore --staged ."
 # alias wip="commit wip"
+alias gp='git config --global user.name "Enea Dhiamandi" && git config --global user.email "enea@dhiamandi.com"'
+alias gw='git config --global user.name "Enea Dhiamandi" && git config --global user.email "enea.dhiamandi@klimahelden.eu"'
 
 alias pest="./vendor/bin/pest"
