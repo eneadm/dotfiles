@@ -112,5 +112,4 @@ export LANG=en_US.UTF-8
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
